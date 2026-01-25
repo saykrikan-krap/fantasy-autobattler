@@ -62,6 +62,7 @@ Building a **fantasy autobattler** game where players:
 |---|----------|----------|--------|
 | 01 | Game Vision & Pillars | `01_game_vision_and_pillars.md` | Draft complete |
 | 02 | Battle System | `02_battle_system.md` | Draft complete |
+| 06 | Scripting & Orders | `06_scripting_and_orders.md` | Initial draft (outline + hero scripting brainstorm) |
 | 07 | LLM Commander | `07_llm_commander.md` | Draft complete |
 
 ---
@@ -73,7 +74,6 @@ Building a **fantasy autobattler** game where players:
 | 03 | Units & Abilities | Unit archetypes, stats, abilities, status effects, wounds |
 | 04 | Factions | Faction design philosophy, Humans roster, Orcs roster |
 | 05 | Army Building | Point-buy system, squad purchasing, upgrades, items, spells |
-| 06 | Scripting & Orders | Priority system, what behaviors are expressible, script format, fallback heuristics |
 | 08 | Multiplayer & Match Flow | Async model, submission, resolution, replay delivery |
 | 09 | Replay System | Event log spec, replay controls, LLM decision visibility |
 | 10 | AI Opponents | Preset armies, AI behaviors for single-player |
@@ -110,6 +110,14 @@ Building a **fantasy autobattler** game where players:
 12. **Squad types:** Standard squads (primary units + upgrades) and Hero squads (powerful individual + retinue)
 13. **Squad purchasing:** Players buy squads, not individual units
 14. **Failed action fallbacks:** Context-aware heuristics, not just wait (blocked by enemy → attack, etc.)
+
+### Scripting & Orders (from 06 doc)
+1. **Two layers of control:** Army-level orders (natural language → LLM Commander) and squad-level scripts (explicit config)
+2. **Two types of AI:** Coded squad AI (deterministic, troop squads) and LLM Commander (adaptive, hero-focused)
+3. **Troop squads:** Simple scripts—stance + target priority. Coded AI executes. Commander can modify config.
+4. **Hero squads:** Complex scripts—opening actions with conditions, default behavior, fallbacks. Dominions-inspired but with conditions.
+5. **Conditions:** Factorio train signal complexity. AND/OR supported. Can reference friendly units (known), not specific enemies (only types).
+6. **Retinue:** No separate scripting—behavior determined by role/identity.
 
 ### Terminology
 - **Thug:** Single powerful unit for tactical goals. Cost-effective "special forces."
