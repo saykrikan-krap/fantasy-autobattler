@@ -62,6 +62,7 @@ Building a **fantasy autobattler** game where players:
 |---|----------|----------|--------|
 | 01 | Game Vision & Pillars | `01_game_vision_and_pillars.md` | Draft complete |
 | 02 | Battle System | `02_battle_system.md` | Draft complete |
+| 03 | Units & Abilities | `03_units_and_abilities.md` | Draft complete |
 | 06 | Scripting & Orders | `06_scripting_and_orders.md` | Initial draft (outline + hero scripting brainstorm) |
 | 07 | LLM Commander | `07_llm_commander.md` | Draft complete |
 
@@ -71,7 +72,6 @@ Building a **fantasy autobattler** game where players:
 
 | # | Document | Purpose |
 |---|----------|---------|
-| 03 | Units & Abilities | Unit archetypes, stats, abilities, status effects, wounds |
 | 04 | Factions | Faction design philosophy, Humans roster, Orcs roster |
 | 05 | Army Building | Point-buy system, squad purchasing, upgrades, items, spells |
 | 08 | Multiplayer & Match Flow | Async model, submission, resolution, replay delivery |
@@ -80,6 +80,7 @@ Building a **fantasy autobattler** game where players:
 | 11 | User Interface | Army builder, order input, replay viewer screens |
 | 12 | MCP Integration | Agent-assisted army building, exposed capabilities |
 | 13 | Content Roadmap | Units, abilities, items, maps needed for v1 |
+| ?? | Magic System | May split out from 03 if scope warrants |
 
 ---
 
@@ -118,6 +119,17 @@ Building a **fantasy autobattler** game where players:
 4. **Hero squads:** Complex scripts—opening actions with conditions, default behavior, fallbacks. Dominions-inspired but with conditions.
 5. **Conditions:** Factorio train signal complexity. AND/OR supported. Can reference friendly units (known), not specific enemies (only types).
 6. **Retinue:** No separate scripting—behavior determined by role/identity.
+
+### Units & Abilities (from 03 doc)
+1. **Chassis system:** Determines equipment slots (humanoid, dragon, hydra have different configs)
+2. **Equipment rules:** Regular units = fixed, Heroes = customizable, Retinue = fixed
+3. **Core stats:** HP, Stamina, Size, Movement Type, Attack, Defense, Protection, Precision, speeds, Encumbrance, XP
+4. **Magic system:** 8 schools (4 elements + 4 sorceries), proficiency levels 1-10 soft cap, fatigue cost based on skill vs spell requirement in primary path
+5. **Weapons:** Natural or equipped, some additive (dual wield), some mutually exclusive
+6. **Protection:** Multiple sources (natural, armor, shield), shield bypass mechanic, stacking rules TBD
+7. **Wounds:** Damage can cause wounds with penalties (lost eye, arm, head), multi-headed creatures can survive head loss
+8. **Mounted units:** Composition of mount + rider, Size = mount's size, v1 treats as single unit
+9. **Unit tags:** No rigid archetypes, tags help AI/scripting (infantry, caster, flying, etc.)
 
 ### Terminology
 - **Thug:** Single powerful unit for tactical goals. Cost-effective "special forces."
