@@ -66,6 +66,7 @@ Building a **fantasy autobattler** game where players:
 | 05 | Army Building | `05_army_building.md` | Draft complete |
 | 06 | Scripting & Orders | `06_scripting_and_orders.md` | Initial draft (outline + hero scripting brainstorm) |
 | 08 | Multiplayer & Match Flow | `08_multiplayer_and_match_flow.md` | Draft complete |
+| 09 | Replay System | `09_replay_system.md` | Draft complete |
 | 07 | LLM Commander | `07_llm_commander.md` | Draft complete |
 
 ---
@@ -75,7 +76,6 @@ Building a **fantasy autobattler** game where players:
 | # | Document | Purpose |
 |---|----------|---------|
 | 04 | Factions | Faction design philosophy, Humans roster, Orcs roster |
-| 09 | Replay System | Event log spec, replay controls, LLM decision visibility |
 | 10 | AI Opponents | Preset armies, AI behaviors for single-player |
 | 11 | User Interface | Army builder, order input, replay viewer screens |
 | 12 | MCP Integration | Agent-assisted army building, exposed capabilities |
@@ -130,6 +130,18 @@ Building a **fantasy autobattler** game where players:
 7. **Wounds:** Damage can cause wounds with penalties (lost eye, arm, head), multi-headed creatures can survive head loss
 8. **Mounted units:** Composition of mount + rider, Size = mount's size, v1 treats as single unit
 9. **Unit tags:** No rigid archetypes, tags help AI/scripting (infantry, caster, flying, etc.)
+
+### Replay System (from 09 doc)
+1. **Event log is authoritative:** Deterministic playback of recorded events. Replayer has no simulation logic.
+2. **Playback controls:** Play, pause, speed levels, rewind, restart, event stepping
+3. **Event stepping:** Advances to notable events (movement, attacks, spells, deaths, routing, Commander intervention)
+4. **Event chains:** Causally-linked events display together (attack + resulting death). Structure TBD (chain ID vs nested vs hybrid).
+5. **Visual spectacle:** Animations for combat, spells, abilities, projectiles. Event notation for significant actions.
+6. **Camera:** Pan and zoom. No follow-unit camera.
+7. **Unit inspection:** Click tile for stats, hero finder by name
+8. **LLM Commander visibility:** Brief summary of intervention reasoning (not full CoT)
+9. **Battle summary:** Survival report, kill counters per unit/squad, match result
+10. **Sharing:** Through lobby/friends initially. Event-log based = resilient to game updates.
 
 ### Multiplayer & Match Flow (from 08 doc)
 1. **Fully async:** No real-time play, multiple concurrent matches allowed
@@ -202,8 +214,8 @@ The prototype is throwaway code, but the design doc provides context for battle 
 
 ## Next Steps (Suggested)
 
-1. Draft **Replay System** doc (event log spec, controls, LLM decision visibility)
-2. Draft **AI Opponents** doc (preset armies, behaviors for single-player)
+1. Draft **AI Opponents** doc (preset armies, behaviors for single-player)
+2. Draft **User Interface** doc (army builder, order input, replay viewer screens)
 3. Draft **Factions** doc (Humans and Orcs rosters, magic affinities for v1) — saved for near the end
 
 Or tackle whichever doc feels most pressing.
