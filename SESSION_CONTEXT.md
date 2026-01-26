@@ -65,6 +65,7 @@ Building a **fantasy autobattler** game where players:
 | 03 | Units & Abilities | `03_units_and_abilities.md` | Draft complete |
 | 05 | Army Building | `05_army_building.md` | Draft complete |
 | 06 | Scripting & Orders | `06_scripting_and_orders.md` | Initial draft (outline + hero scripting brainstorm) |
+| 08 | Multiplayer & Match Flow | `08_multiplayer_and_match_flow.md` | Draft complete |
 | 07 | LLM Commander | `07_llm_commander.md` | Draft complete |
 
 ---
@@ -74,7 +75,6 @@ Building a **fantasy autobattler** game where players:
 | # | Document | Purpose |
 |---|----------|---------|
 | 04 | Factions | Faction design philosophy, Humans roster, Orcs roster |
-| 08 | Multiplayer & Match Flow | Async model, submission, resolution, replay delivery |
 | 09 | Replay System | Event log spec, replay controls, LLM decision visibility |
 | 10 | AI Opponents | Preset armies, AI behaviors for single-player |
 | 11 | User Interface | Army builder, order input, replay viewer screens |
@@ -130,6 +130,18 @@ Building a **fantasy autobattler** game where players:
 7. **Wounds:** Damage can cause wounds with penalties (lost eye, arm, head), multi-headed creatures can survive head loss
 8. **Mounted units:** Composition of mount + rider, Size = mount's size, v1 treats as single unit
 9. **Unit tags:** No rigid archetypes, tags help AI/scripting (infantry, caster, flying, etc.)
+
+### Multiplayer & Match Flow (from 08 doc)
+1. **Fully async:** No real-time play, multiple concurrent matches allowed
+2. **Match creation:** Challenge friend, host game, random matchmaking. Ranked deferred for v1.
+3. **One map type for v1:** Grasslands with random terrain variance (trees, water). Scenarios/map types deferred.
+4. **Single submission phase:** Build, place, script, submit all at once. May split phases later.
+5. **Match lobby:** Players can message each other, save progress while building
+6. **Server-side resolution:** Battle runs when both submit, both notified
+7. **Timeouts:** Configurable per match, forfeit if exceeded
+8. **Army setup saves:** Save/load army configurations for reuse
+9. **Spectating:** Watch friend games and replays, share replays
+10. **Single-player modes:** Online (with Commander), offline (no LLM), same-player both sides (experimentation)
 
 ### Army Building (from 05 doc)
 1. **Roster sources:** Core faction roster, mercenary roster (universal, higher cost), magic creatures (pre-summoned)
@@ -190,9 +202,9 @@ The prototype is throwaway code, but the design doc provides context for battle 
 
 ## Next Steps (Suggested)
 
-1. Draft **Factions** doc (Humans and Orcs rosters, magic affinities for v1)
-2. Draft **Multiplayer & Match Flow** doc (async model, submission, resolution)
-3. Draft **Replay System** doc (event log spec, controls, LLM decision visibility)
+1. Draft **Replay System** doc (event log spec, controls, LLM decision visibility)
+2. Draft **AI Opponents** doc (preset armies, behaviors for single-player)
+3. Draft **Factions** doc (Humans and Orcs rosters, magic affinities for v1) — saved for near the end
 
 Or tackle whichever doc feels most pressing.
 
