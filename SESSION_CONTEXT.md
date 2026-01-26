@@ -63,6 +63,7 @@ Building a **fantasy autobattler** game where players:
 | 01 | Game Vision & Pillars | `01_game_vision_and_pillars.md` | Draft complete |
 | 02 | Battle System | `02_battle_system.md` | Draft complete |
 | 03 | Units & Abilities | `03_units_and_abilities.md` | Draft complete |
+| 05 | Army Building | `05_army_building.md` | Draft complete |
 | 06 | Scripting & Orders | `06_scripting_and_orders.md` | Initial draft (outline + hero scripting brainstorm) |
 | 07 | LLM Commander | `07_llm_commander.md` | Draft complete |
 
@@ -73,7 +74,6 @@ Building a **fantasy autobattler** game where players:
 | # | Document | Purpose |
 |---|----------|---------|
 | 04 | Factions | Faction design philosophy, Humans roster, Orcs roster |
-| 05 | Army Building | Point-buy system, squad purchasing, upgrades, items, spells |
 | 08 | Multiplayer & Match Flow | Async model, submission, resolution, replay delivery |
 | 09 | Replay System | Event log spec, replay controls, LLM decision visibility |
 | 10 | AI Opponents | Preset armies, AI behaviors for single-player |
@@ -131,6 +131,18 @@ Building a **fantasy autobattler** game where players:
 8. **Mounted units:** Composition of mount + rider, Size = mount's size, v1 treats as single unit
 9. **Unit tags:** No rigid archetypes, tags help AI/scripting (infantry, caster, flying, etc.)
 
+### Army Building (from 05 doc)
+1. **Roster sources:** Core faction roster, mercenary roster (universal, higher cost), magic creatures (pre-summoned)
+2. **Magic path affinity:** Factions have cost multipliers per school (abundant → none). Affects creatures, items, gems, empowerment.
+3. **All mages are heroes:** Heroes may be casters or non-casters
+4. **Items:** Have magic path requirements, cost modified by faction affinity
+5. **Spells:** All unlocked, gated by mage capability. Powerful spells require gems.
+6. **Gems:** Shared army resource, fixed base cost modified by affinity. Used for powerful spells or temporary empowerment.
+7. **Empowerment:** Points can strengthen existing paths (scaling cost) or grant new paths (affinity-based cost). Some mages have personal discounts.
+8. **Squad upgrades:** Defined per-squad (size, equipment, champion, training). Not all squads have all options.
+9. **Unique units:** Good value for points; uniqueness is the constraint, not inflated pricing
+10. **Composition rules:** Minimum one squad (can be solo hero). No same-faction mirror matches for v1.
+
 ### Terminology
 - **Thug:** Single powerful unit for tactical goals. Cost-effective "special forces."
 - **Super Combatant (SC):** One-person army. Examples: titans, ancient dragons, demon lords. Viable strategy: single buffed SC.
@@ -178,9 +190,9 @@ The prototype is throwaway code, but the design doc provides context for battle 
 
 ## Next Steps (Suggested)
 
-1. Draft **Units & Abilities** doc (defines stats, wounds, stamina, abilities that Battle System references)
-2. Draft **Scripting & Orders** doc (defines what Commander/scripts can express)
-3. Draft **Factions** doc (Humans and Orcs rosters for v1)
+1. Draft **Factions** doc (Humans and Orcs rosters, magic affinities for v1)
+2. Draft **Multiplayer & Match Flow** doc (async model, submission, resolution)
+3. Draft **Replay System** doc (event log spec, controls, LLM decision visibility)
 
 Or tackle whichever doc feels most pressing.
 
