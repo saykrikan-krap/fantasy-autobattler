@@ -63,7 +63,7 @@ How long each player has to submit their army.
 - Would need careful balance consideration
 - Good for friendly/casual matches
 
-Map variance is generated per match but both players see the same battlefield.
+Map variance is generated per match but both players see the same battlefield. The map is revealed when the match begins (lobby opens), before placement and scripting. With a single v1 map, this is effectively a constant for now.
 
 ---
 
@@ -111,7 +111,7 @@ Once submitted, the army cannot be modified.
 - Unit positions in deployment zone
 - Squad scripts (stance, target priority, hero scripts)
 - Army-level orders (natural language for Commander)
-- Commander enabled/disabled flag
+- Commander enabled/disabled flag (see `06_llm_commander.md` for policy)
 
 ### Validation
 
@@ -288,7 +288,11 @@ Army configurations can be **saved and loaded**:
 Saves include:
 - Army composition
 - All upgrades and items
-- **Do not include:** placement, scripts (these are per-match)
+- Placement in the deployment zone
+- Squad scripts and hero scripts
+- Army-level orders / Commander prompts (if enabled)
+
+Players can also save/load individual scripts and Commander prompts independently as templates.
 
 Useful for:
 - Quickly fielding a favorite army
@@ -347,7 +351,7 @@ Playing without server connection.
 4. Watch replay
 
 **Limitations:**
-- **No LLM Commander** — Local hardware unlikely to support it
+- **No LLM Commander** — Offline mode uses scripted-only behavior (see `06_llm_commander.md`)
 - AI uses scripted behavior only (no adaptive Commander decisions)
 - Less dynamic battles
 

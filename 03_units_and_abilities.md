@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document defines the **framework** for unit stats, equipment, abilities, and related systems. It does not enumerate every specific unit, ability, or status effect—those will number in the hundreds and are defined elsewhere (Factions doc, content databases).
+This document defines the **framework** for unit stats, equipment, abilities, and related systems. It does not enumerate every specific unit, ability, or status effect—those will number in the hundreds and are defined elsewhere (content databases).
 
 ---
 
@@ -73,7 +73,7 @@ There are **8 schools** organized into two categories:
 
 ### Proficiency
 
-- **Regular units**: Never proficient in magic schools
+- **Regular units**: Never proficient in magic schools. They do not cast spells; any magical-like attacks are natural abilities in their action cycle.
 - **Heroes**: May have proficiency in one or more schools
 
 Proficiency is measured as a **skill level**:

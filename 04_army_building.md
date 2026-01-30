@@ -140,7 +140,7 @@ Gems are purchased during army building and consumed on use.
 
 Gems have a second use: **temporarily empowering casters** during battle to cast spells beyond their normal capability.
 
-*(Full gem mechanics detailed in Magic System doc)*
+*(Full gem mechanics TBD)*
 
 ---
 
@@ -231,7 +231,7 @@ Some units are **unique**—only one per army:
 
 Unique units are **good value for points**—their power justifies their cost. The constraint is uniqueness itself, not inflated pricing.
 
-Unique status is per-army. The faction restriction (below) prevents both players from fielding the same faction's unique units.
+Unique status is enforced per side only. Mirror matches are allowed; each player can independently field their faction's unique units, but no duplicates within a single army.
 
 ---
 
@@ -241,11 +241,6 @@ Unique status is per-army. The faction restriction (below) prevents both players
 
 - At least **one squad**
 - This can be a single hero with no retinue (armies of one are legal)
-
-### Faction Restriction
-
-- Both players **cannot choose the same faction** (for v1)
-- May revisit for mirror matches later
 
 ### No Other Restrictions
 
@@ -295,5 +290,3 @@ Significant balancing work required by developers to ensure diverse viable strat
 ## References
 
 - `03_units_and_abilities.md` — Equipment slots, chassis system
-- `04_factions.md` — Faction rosters and affinities (TBD)
-- Magic System doc — Gem mechanics, spell requirements (TBD)
