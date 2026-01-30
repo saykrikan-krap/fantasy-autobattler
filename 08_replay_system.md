@@ -207,7 +207,7 @@ Replays can be **shared** with other players:
 
 ### Initial Mechanism
 
-Share through the match lobby / friends system (see `08_multiplayer_and_match_flow.md`):
+Share through the match lobby / friends system (see `07_multiplayer_and_match_flow.md`):
 - Friends can view your match history and replays
 - Share replay links within the game
 
@@ -232,5 +232,5 @@ For v1, in-game sharing through existing social features is sufficient.
 ## References
 
 - `02_battle_system.md` — Combat mechanics being replayed
-- `07_llm_commander.md` — Commander intervention behavior
-- `08_multiplayer_and_match_flow.md` — Replay delivery and sharing context
+- `06_llm_commander.md` — Commander intervention behavior
+- `07_multiplayer_and_match_flow.md` — Replay delivery and sharing context

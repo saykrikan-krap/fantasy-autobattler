@@ -41,7 +41,7 @@ When creating a match, the following are configured:
 
 ### Point Budget
 
-Determines army size and power level. See `05_army_building.md` for budget tiers.
+Determines army size and power level. See `04_army_building.md` for budget tiers.
 
 Both players have the same budget.
 
@@ -319,7 +319,7 @@ Playing against AI opponents while connected to the server.
 **AI Opponent Selection:**
 - Preset armies with varying difficulty
 - Different AI behaviors (aggressive, defensive, magic-heavy)
-- Details in `10_ai_opponents.md`
+- Details TBD
 
 ### Same-Player Both Sides
 
@@ -372,8 +372,7 @@ Offline mode is simpler but useful for practice and experimentation.
 
 ## References
 
-- `05_army_building.md` — Point budgets, army composition
-- `06_scripting_and_orders.md` — Squad scripts, army-level orders
-- `07_llm_commander.md` — Commander behavior during resolution
-- `09_replay_system.md` — Replay format and controls (TBD)
-- `10_ai_opponents.md` — AI presets and behaviors (TBD)
+- `04_army_building.md` — Point budgets, army composition
+- `05_scripting_and_orders.md` — Squad scripts, army-level orders
+- `06_llm_commander.md` — Commander behavior during resolution
+- `08_replay_system.md` — Replay format and controls

@@ -63,25 +63,25 @@ Building a **fantasy autobattler** game where players:
 | 01 | Game Vision & Pillars | `01_game_vision_and_pillars.md` | Draft complete |
 | 02 | Battle System | `02_battle_system.md` | Draft complete |
 | 03 | Units & Abilities | `03_units_and_abilities.md` | Draft complete |
-| 05 | Army Building | `05_army_building.md` | Draft complete |
-| 06 | Scripting & Orders | `06_scripting_and_orders.md` | Initial draft (outline + hero scripting brainstorm) |
-| 08 | Multiplayer & Match Flow | `08_multiplayer_and_match_flow.md` | Draft complete |
-| 09 | Replay System | `09_replay_system.md` | Draft complete |
-| 07 | LLM Commander | `07_llm_commander.md` | Draft complete |
-| 12 | External Assistant Integration | `12_external_assistant_integration.md` | Draft complete |
+| 04 | Army Building | `04_army_building.md` | Draft complete |
+| 05 | Scripting & Orders | `05_scripting_and_orders.md` | Initial draft |
+| 06 | LLM Commander | `06_llm_commander.md` | Draft complete |
+| 07 | Multiplayer & Match Flow | `07_multiplayer_and_match_flow.md` | Draft complete |
+| 08 | Replay System | `08_replay_system.md` | Draft complete |
+| 09 | External Assistant Integration | `09_external_assistant_integration.md` | Draft complete |
 
 ---
 
-## Documents Shelved
+## Topics Deferred
 
 These were considered but deferred as out of scope for the initial game design docs:
 
-| # | Document | Reason |
-|---|----------|--------|
-| 04 | Factions | Content definition, not core design |
-| 10 | AI Opponents | Content definition, not core design |
-| 13 | Content Roadmap | Its own epic |
-| ?? | Magic System | Covered sufficiently in 03 |
+| Topic | Reason |
+|-------|--------|
+| Factions | Content definition, not core design |
+| AI Opponents | Content definition, not core design |
+| Content Roadmap | Ongoing process independent of core development |
+| Magic System | Covered sufficiently in doc 03 |
 
 ---
 

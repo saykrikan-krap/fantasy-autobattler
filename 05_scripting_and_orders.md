@@ -242,4 +242,4 @@ What happens when intended actions fail.
 ## References
 
 - `02_battle_system.md` — Combat mechanics that scripts control
-- `07_llm_commander.md` — How the Commander interprets and adapts scripts
+- `06_llm_commander.md` — How the Commander interprets and adapts scripts

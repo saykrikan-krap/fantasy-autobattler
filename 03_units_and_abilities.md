@@ -358,6 +358,4 @@ Scripts and AI use tags for targeting (e.g., "target casters first").
 ## References
 
 - `02_battle_system.md` — Combat resolution, damage, movement
-- `04_factions.md` — Specific unit rosters (TBD)
-- `06_scripting_and_orders.md` — How abilities are scripted for heroes
-- Magic System doc — May be split out if scope warrants
+- `05_scripting_and_orders.md` — How abilities are scripted for heroes

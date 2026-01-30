@@ -169,6 +169,6 @@ All actions go through the same validation as player actions.
 
 ## References
 
-- `05_army_building.md` — What army building involves
-- `07_llm_commander.md` — The battle-time AI (distinct from this)
-- `08_multiplayer_and_match_flow.md` — When setup occurs
+- `04_army_building.md` — What army building involves
+- `06_llm_commander.md` — The battle-time AI (distinct from this)
+- `07_multiplayer_and_match_flow.md` — When setup occurs
