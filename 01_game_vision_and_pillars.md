@@ -18,7 +18,7 @@ The skill is in preparation: army composition, equipment choices, and the orders
 
 ## Design Pillars
 
-### 1. LLM Commander (Core Differentiator)
+### 1. LLM Commander (V1 Differentiator, Experimental)
 
 Players don't write detailed scripts—they issue natural language orders to an AI commander who interprets intent and directs units.
 
@@ -37,7 +37,7 @@ Players don't write detailed scripts—they issue natural language orders to an 
 - Creates emergent gameplay (LLM interpretation adds variance)
 - Benchmark potential (compare LLM performance)
 
-**Optional:** Players who prefer full control can disable the Commander and script units directly.
+**Status (v1):** Highly experimental and included in v1. See `06_llm_commander.md` for opt-out and balance policy.
 
 **Note:** The Commander (server-side, game-managed) is distinct from the LLM Assistant (client-side MCP integration for power users). See LLM Commander doc for details.
 
@@ -137,7 +137,7 @@ Every battle produces a complete event log. Replays are authoritative playback o
 - Core battle system (tick-based, deterministic resolution)
 - 2 factions (Humans, Orcs) with distinct rosters
 - Point-buy army builder
-- Natural language order system with LLM Commander interpretation (optional—players can script directly)
+- Natural language order system with LLM Commander interpretation (see `06_llm_commander.md` for opt-out policy)
 - Server-side battle resolution with LLM adaptation
 - Async multiplayer (challenge friend)
 - Replay viewer with full playback controls

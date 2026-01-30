@@ -4,7 +4,17 @@
 
 The LLM Commander is the AI system that interprets player orders and directs unit behavior during battle. It serves as an abstraction layer between high-level player intent and low-level unit scripts, removing the need for players to be programmers while preserving strategic depth.
 
-This is a **core pillar** of the game, not an optional feature.
+This is included in v1 and intentionally experimental. See Policy Summary for opt-out and balance details.
+
+---
+
+## Policy Summary (V1)
+
+- Included in v1 as a major differentiator; intentionally experimental
+- Commander runs server-side for battle resolution; players cannot bring their own LLM for battles
+- Opt-out allowed at any time; mixed matches supported
+- Balance assumes Commander-enabled play; if opt-out dominates, the Commander needs improvement
+- Offline mode uses scripted-only behavior (Commander unavailable)
 
 ---
 
@@ -51,7 +61,7 @@ Some players prefer full control and may disable the LLM Commander entirely. The
 - Have complete determinism in their unit behavior (no LLM adaptation)
 - Trade flexibility for predictability
 
-The game should be designed so that the Commander provides clear benefits (adaptation, convenience) that make most players *want* to use it, while respecting that some players prefer manual control.
+Opt-out is allowed at any time. The game should be designed so that the Commander provides clear benefits (adaptation, convenience) that make most players *want* to use it, while respecting that some players prefer manual control. If opting out is consistently stronger, that signals the Commander needs improvement.
 
 ---
 
@@ -91,7 +101,7 @@ Before battle resolution begins, players submit orders to their LLM Commander.
 Orders are **natural language prompts**, just like any other LLM interaction. Players write orders the way they would instruct a human general.
 
 **Order management features:**
-- **Save/load prompts** - Players can save successful order sets and reuse them
+- **Save/load prompts** - Players can save successful order sets and reuse them (standalone or as part of a full army setup)
 - **Prompt review (optional)** - Before final submission, players can request the Commander show how it interprets the orders. This allows refinement before committing to battle.
 
 ### Interpretation Output
@@ -272,8 +282,6 @@ LLM inference has real costs. The system must balance responsiveness with sustai
 3. **Learning/feedback** - Should the system help players write better orders? ("Your order 'attack' is vague—consider specifying targets")
 
 4. **Fallback behavior** - What happens if LLM call fails mid-battle? Continue with existing scripts? Pause? Default behaviors?
-
-6. **Commander vs. no-Commander matchmaking** - Should players using the Commander be matched separately from those who opt out? Or is mixed matchmaking fine?
 
 ---
 

@@ -28,7 +28,7 @@ Troop squads primarily rely on coded AI. Hero squads are where the LLM Commander
 
 4. **The LLM Commander reduces tedium, not skill** — Commander handles boring conditional logic (immunity detection, resource pacing) so players focus on strategy rather than exhaustive edge-case scripting.
 
-5. **Manual scripting is viable but opt-in** — Players who want full control can disable the Commander and script everything. This is harder but deterministic.
+5. **Manual scripting is viable** — Players who want full control can script everything. See `06_llm_commander.md` for opt-out policy and balance assumptions.
 
 6. **Scripts don't assume enemy knowledge** — You can target enemy *types* (mages, cavalry, large units) but not specific enemy unit IDs. No scouting or pre-battle intel required.
 
@@ -233,7 +233,7 @@ What happens when intended actions fail.
 
 - Condition complexity limits for manual scripters
 - Whether squad upgrades unlock new scripting options
-- Order templates and sharing
+- Order template sharing UX (templates are supported; sharing format TBD)
 - Opponent script visibility in replays
 - Cross-faction scripting differences (if any)
 

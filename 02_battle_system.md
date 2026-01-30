@@ -15,8 +15,6 @@ The battle system is the core simulation engine that resolves combat between two
 - Support LLM Commander intervention at defined points
 - Rich enough to reward army composition and order quality
 
-**Open Question:** How does the LLM Commander function in offline single-player? Options include: requiring internet for Commander features, bundling a local model, or limiting single-player to scripted-only mode.
-
 ---
 
 ## Tick-Based Resolution
@@ -236,7 +234,7 @@ Below are starting action types. The full game will support many more.
 
 ### Action Costs (Placeholder Reference)
 
-The following are **placeholder values** from the prototype. These unit types are not intended for the final game—they serve as reference points for understanding the system. Actual rosters will be defined in the Factions doc.
+The following are **placeholder values** from the prototype. These unit types are not intended for the final game—they serve as reference points for understanding the system. Actual rosters will be defined in content data.
 
 | Unit Type | Move | Attack | Wait |
 |-----------|------|--------|------|
@@ -658,16 +656,15 @@ The replayer reconstructs the battle from the event log alone:
 
 ## Open Questions
 
-1. **Offline LLM Commander**: How to handle Commander in offline single-player?
-2. **Wounds system details**: Which wounds exist? Thresholds? Recovery?
-3. **Stamina tuning**: Depletion rates, recovery, effect severity?
-4. **Trampling mechanics**: Size thresholds, push rules, damage?
-5. **Precision system**: How does precision scale with range? Environmental factors?
-6. **Morale thresholds**: What triggers morale checks? Break points?
-7. **Rally mechanics**: Radius, cooldown, requirements?
-8. **Commander intervention model**: Best trigger combination?
-9. **Large unit melee range**: How does size map to reach?
-10. **Squad upgrade limits**: How many upgrades per squad? Point costs?
+1. **Wounds system details**: Which wounds exist? Thresholds? Recovery?
+2. **Stamina tuning**: Depletion rates, recovery, effect severity?
+3. **Trampling mechanics**: Size thresholds, push rules, damage?
+4. **Precision system**: How does precision scale with range? Environmental factors?
+5. **Morale thresholds**: What triggers morale checks? Break points?
+6. **Rally mechanics**: Radius, cooldown, requirements?
+7. **Commander intervention model**: Best trigger combination?
+8. **Large unit melee range**: How does size map to reach?
+9. **Squad upgrade limits**: How many upgrades per squad? Point costs?
 
 ---
 
