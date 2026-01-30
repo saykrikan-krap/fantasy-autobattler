@@ -362,12 +362,11 @@ Offline mode is simpler but useful for practice and experimentation.
 
 ## Open Questions
 
-1. **Replay retention:** How long are replays stored?
-2. **Notification preferences:** Granularity of notification settings?
-3. **Match abandonment:** What happens to matches if a player deletes their account?
-4. **Concurrent match limit:** Maximum simultaneous matches per player?
-5. **AI opponent variety:** How many presets for v1?
-6. **Match privacy defaults:** Public, friends-only, or private by default?
+1. **Notification preferences:** Granularity of notification settings?
+2. **Match abandonment:** What happens to matches if a player deletes their account?
+3. **Concurrent match limit:** Maximum simultaneous matches per player?
+4. **AI opponent variety:** How many presets for v1?
+5. **Match privacy defaults:** Public, friends-only, or private by default?
 
 ---
 

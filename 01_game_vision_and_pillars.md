@@ -166,8 +166,5 @@ Every battle produces a complete event log. Replays are authoritative playback o
 
 ## Open Questions
 
-1. **LLM selection during battle** - Single server LLM, or player choice from approved list?
-2. **Order syntax** - Natural language only, or structured order format?
-3. **LLM decision visibility** - How verbose should commander reasoning be in replays?
-4. **LLM intervention frequency** - How often can the LLM Commander intervene during battle? Cost considerations make per-tick intervention impractical. What triggers intervention (time-based cadence, significant events, threshold conditions)?
-5. **Matchmaking (post-v1)** - ELO-based, or faction-based, or both?
+1. **LLM decision visibility** - How verbose should commander reasoning be in replays?
+2. **LLM intervention frequency** - How often can the LLM Commander intervene during battle? Cost considerations make per-tick intervention impractical. What triggers intervention (time-based cadence, significant events, threshold conditions)?

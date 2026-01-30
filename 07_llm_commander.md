@@ -271,9 +271,7 @@ LLM inference has real costs. The system must balance responsiveness with sustai
 
 3. **Learning/feedback** - Should the system help players write better orders? ("Your order 'attack' is vague—consider specifying targets")
 
-4. **LLM model selection** - Single model for all battles? Player choice from approved list? Different tiers for different contexts?
-
-5. **Fallback behavior** - What happens if LLM call fails mid-battle? Continue with existing scripts? Pause? Default behaviors?
+4. **Fallback behavior** - What happens if LLM call fails mid-battle? Continue with existing scripts? Pause? Default behaviors?
 
 6. **Commander vs. no-Commander matchmaking** - Should players using the Commander be matched separately from those who opt out? Or is mixed matchmaking fine?
 

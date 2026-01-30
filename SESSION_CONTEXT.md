@@ -77,7 +77,6 @@ Building a **fantasy autobattler** game where players:
 |---|----------|---------|
 | 04 | Factions | Faction design philosophy, Humans roster, Orcs roster |
 | 10 | AI Opponents | Preset armies, AI behaviors for single-player |
-| 11 | User Interface | Army builder, order input, replay viewer screens |
 | 12 | MCP Integration | Agent-assisted army building, exposed capabilities |
 | 13 | Content Roadmap | Units, abilities, items, maps needed for v1 |
 | ?? | Magic System | May split out from 03 if scope warrants |
@@ -215,8 +214,11 @@ The prototype is throwaway code, but the design doc provides context for battle 
 ## Next Steps (Suggested)
 
 1. Draft **AI Opponents** doc (preset armies, behaviors for single-player)
-2. Draft **User Interface** doc (army builder, order input, replay viewer screens)
-3. Draft **Factions** doc (Humans and Orcs rosters, magic affinities for v1) — saved for near the end
+2. Draft **MCP Integration** doc (agent-assisted army building)
+3. Draft **Content Roadmap** doc (units, abilities, items, maps for v1)
+4. Draft **Factions** doc (Humans and Orcs rosters, magic affinities for v1) — saved for near the end
+
+UI design deferred to implementation phase after story scoping.
 
 Or tackle whichever doc feels most pressing.
 

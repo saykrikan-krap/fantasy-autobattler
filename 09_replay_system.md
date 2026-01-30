@@ -223,10 +223,9 @@ For v1, in-game sharing through existing social features is sufficient.
 
 ## Open Questions
 
-1. **Event chain structure**: Chain ID, nested payload, or hybrid approach?
-2. **Damage numbers**: Show by default, optional, or never?
-3. **Kill attribution**: How to handle assists, AoE kills, damage-over-time?
-4. **Replay commentary**: Allow players to add notes/markers to replays for sharing?
+1. **Damage numbers**: Show by default, optional, or never?
+2. **Kill attribution**: How to handle assists, AoE kills, damage-over-time?
+3. **Replay commentary**: Allow players to add notes/markers to replays for sharing?
 
 ---
 
