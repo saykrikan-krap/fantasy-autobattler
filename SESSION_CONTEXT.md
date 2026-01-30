@@ -20,7 +20,7 @@ Building a **fantasy autobattler** game where players:
 
 1. **LLM Commander** — Server-side AI interprets player orders, generates unit scripts, adapts during battle. Optional (players can script manually). Game absorbs LLM cost.
 
-2. **LLM Assistant** — Separate system. Client-side MCP server ships with game. Power users connect their own LLM agent (Claude Code, Codex) for army building assistance. Player provides own LLM.
+2. **External Assistant** — Separate system. Game exposes interface for external systems (LLM agents, player scripts, future systems) to assist with army building. Player provides their own system. MCP server is one possible implementation.
 
 3. **Async Multiplayer** — Build army → submit → server resolves when opponent submits → watch replay. No simultaneous play required.
 
@@ -43,7 +43,7 @@ Building a **fantasy autobattler** game where players:
 - Async multiplayer (challenge friend)
 - Replay viewer (pause, rewind, speed controls)
 - Single-player vs AI presets
-- MCP server for LLM Assistant (power user feature)
+- External Assistant interface for agent-assisted army building (power user feature)
 
 **Deferred:**
 - Ranked matchmaking / ELO
@@ -68,6 +68,7 @@ Building a **fantasy autobattler** game where players:
 | 08 | Multiplayer & Match Flow | `08_multiplayer_and_match_flow.md` | Draft complete |
 | 09 | Replay System | `09_replay_system.md` | Draft complete |
 | 07 | LLM Commander | `07_llm_commander.md` | Draft complete |
+| 12 | External Assistant Integration | `12_external_assistant_integration.md` | Draft complete |
 
 ---
 
@@ -77,7 +78,6 @@ Building a **fantasy autobattler** game where players:
 |---|----------|---------|
 | 04 | Factions | Faction design philosophy, Humans roster, Orcs roster |
 | 10 | AI Opponents | Preset armies, AI behaviors for single-player |
-| 12 | MCP Integration | Agent-assisted army building, exposed capabilities |
 | 13 | Content Roadmap | Units, abilities, items, maps needed for v1 |
 | ?? | Magic System | May split out from 03 if scope warrants |
 
@@ -166,6 +166,15 @@ Building a **fantasy autobattler** game where players:
 9. **Unique units:** Good value for points; uniqueness is the constraint, not inflated pricing
 10. **Composition rules:** Minimum one squad (can be solo hero). No same-faction mirror matches for v1.
 
+### External Assistant Integration (from 12 doc)
+1. **Full read access:** Anything the player can see, the External Assistant can read (rosters, stats, items, spells, replays)
+2. **Full action access:** Anything the player can do during setup, the External Assistant can do (build, place, script)
+3. **Batch operations allowed:** Efficiency convenience, not superpower (player could do same with more actions)
+4. **No superpowers:** Cannot access opponent data, hidden data, active battles, or bypass validation
+5. **Replay access:** Can read saved replays and currently-viewed replay for post-battle analysis
+6. **No active battle access:** Battle-time AI is the Commander's domain
+7. **Protocol agnostic:** MCP is one possible implementation; interface could take other forms
+
 ### Terminology
 - **Thug:** Single powerful unit for tactical goals. Cost-effective "special forces."
 - **Super Combatant (SC):** One-person army. Examples: titans, ancient dragons, demon lords. Viable strategy: single buffed SC.
@@ -214,9 +223,8 @@ The prototype is throwaway code, but the design doc provides context for battle 
 ## Next Steps (Suggested)
 
 1. Draft **AI Opponents** doc (preset armies, behaviors for single-player)
-2. Draft **MCP Integration** doc (agent-assisted army building)
-3. Draft **Content Roadmap** doc (units, abilities, items, maps for v1)
-4. Draft **Factions** doc (Humans and Orcs rosters, magic affinities for v1) — saved for near the end
+2. Draft **Content Roadmap** doc (units, abilities, items, maps for v1)
+3. Draft **Factions** doc (Humans and Orcs rosters, magic affinities for v1) — saved for near the end
 
 UI design deferred to implementation phase after story scoping.
 
