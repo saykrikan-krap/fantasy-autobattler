@@ -72,14 +72,16 @@ Building a **fantasy autobattler** game where players:
 
 ---
 
-## Documents Remaining
+## Documents Shelved
 
-| # | Document | Purpose |
-|---|----------|---------|
-| 04 | Factions | Faction design philosophy, Humans roster, Orcs roster |
-| 10 | AI Opponents | Preset armies, AI behaviors for single-player |
-| 13 | Content Roadmap | Units, abilities, items, maps needed for v1 |
-| ?? | Magic System | May split out from 03 if scope warrants |
+These were considered but deferred as out of scope for the initial game design docs:
+
+| # | Document | Reason |
+|---|----------|--------|
+| 04 | Factions | Content definition, not core design |
+| 10 | AI Opponents | Content definition, not core design |
+| 13 | Content Roadmap | Its own epic |
+| ?? | Magic System | Covered sufficiently in 03 |
 
 ---
 
@@ -220,13 +222,14 @@ The prototype is throwaway code, but the design doc provides context for battle 
 
 ---
 
-## Next Steps (Suggested)
+## Status
 
-1. Draft **AI Opponents** doc (preset armies, behaviors for single-player)
-2. Draft **Content Roadmap** doc (units, abilities, items, maps for v1)
-3. Draft **Factions** doc (Humans and Orcs rosters, magic affinities for v1) — saved for near the end
+**Design docs complete.** Ready for story scoping and implementation planning.
 
-UI design deferred to implementation phase after story scoping.
+Next phases (out of scope for this branch):
+- Story scoping based on these requirements
+- UI design during implementation
+- Content definition (factions, AI opponents, specific units/items)
 
 Or tackle whichever doc feels most pressing.
 
