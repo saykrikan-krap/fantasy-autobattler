@@ -683,4 +683,4 @@ The replayer reconstructs the battle from the event log alone:
 
 - `01_game_vision_and_pillars.md` — Core design pillars
 - `06_llm_commander.md` — Commander system details
-- `reference/tick_battle_scale_prototype_base_requirements.md` — Prototype specifications
+- `docs/reference/tick_battle_scale_prototype_base_requirements.md` — Prototype specifications

@@ -60,15 +60,15 @@ Building a **fantasy autobattler** game where players:
 
 | # | Document | Location | Status |
 |---|----------|----------|--------|
-| 01 | Game Vision & Pillars | `01_game_vision_and_pillars.md` | Draft complete |
-| 02 | Battle System | `02_battle_system.md` | Draft complete |
-| 03 | Units & Abilities | `03_units_and_abilities.md` | Draft complete |
-| 04 | Army Building | `04_army_building.md` | Draft complete |
-| 05 | Scripting & Orders | `05_scripting_and_orders.md` | Initial draft |
-| 06 | LLM Commander | `06_llm_commander.md` | Draft complete |
-| 07 | Multiplayer & Match Flow | `07_multiplayer_and_match_flow.md` | Draft complete |
-| 08 | Replay System | `08_replay_system.md` | Draft complete |
-| 09 | External Assistant Integration | `09_external_assistant_integration.md` | Draft complete |
+| 01 | Game Vision & Pillars | `docs/requirements/01_game_vision_and_pillars.md` | Draft complete |
+| 02 | Battle System | `docs/requirements/02_battle_system.md` | Draft complete |
+| 03 | Units & Abilities | `docs/requirements/03_units_and_abilities.md` | Draft complete |
+| 04 | Army Building | `docs/requirements/04_army_building.md` | Draft complete |
+| 05 | Scripting & Orders | `docs/requirements/05_scripting_and_orders.md` | Initial draft |
+| 06 | LLM Commander | `docs/requirements/06_llm_commander.md` | Draft complete |
+| 07 | Multiplayer & Match Flow | `docs/requirements/07_multiplayer_and_match_flow.md` | Draft complete |
+| 08 | Replay System | `docs/requirements/08_replay_system.md` | Draft complete |
+| 09 | External Assistant Integration | `docs/requirements/09_external_assistant_integration.md` | Draft complete |
 
 ---
 
@@ -208,8 +208,8 @@ These were considered but deferred as out of scope for the initial game design d
 
 ## Reference Material
 
-The prototype design doc is in `reference/`:
-- `reference/tick_battle_scale_prototype_base_requirements.md`
+The prototype design doc is in `docs/reference/`:
+- `docs/reference/tick_battle_scale_prototype_base_requirements.md`
 
 This prototype validated:
 - Tick-based deterministic battle at ~2000 units
