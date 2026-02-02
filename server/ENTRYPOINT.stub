@@ -1,0 +1,4 @@
+Entry point stub for backend services.
+
+Replace this file with the real entry point once the stack is chosen
+(e.g., src/main.ts, cmd/server/main.go, or similar).

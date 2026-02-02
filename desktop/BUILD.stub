@@ -1,0 +1,4 @@
+Build/config stub for the desktop app.
+
+Replace this file with the actual build/config files once the desktop stack is chosen
+(e.g., package.json + tauri.conf.json, or similar).

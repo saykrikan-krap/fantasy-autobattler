@@ -1,0 +1,4 @@
+Build/config stub for backend services.
+
+Replace this file with the actual build/config files once the server stack is chosen
+(e.g., package.json, go.mod, or similar).
