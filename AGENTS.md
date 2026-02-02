@@ -29,4 +29,4 @@ Fantasy Autobattler is a fantasy-themed autobattle project. The goal is a shared
 3. Create a branch from `master` in your active worktree (example: `issue-<number>-<short-slug>`).
 4. Implement the work and open a PR.
 5. When the PR is ready for review, set the status to `In review`.
-6. After merge and verification, set the status to `Done`.
+6. After merge and verification, set the status to `Done` and close the issue.

@@ -18,7 +18,7 @@ Use the issue templates (Feature/Task, Bug, Spike). A ticket is considered **Rea
 - `Ready`: fully scoped, unblocked, and can be picked up
 - `In progress`: actively being worked on (move here before starting)
 - `In review`: PR opened and ready for review
-- `Done`: merged and verified
+- `Done`: merged and verified, and the issue is closed
 
 **Priority**
 - `P0`: blocks work or major milestone
@@ -59,7 +59,7 @@ Use the issue templates (Feature/Task, Bug, Spike). A ticket is considered **Rea
 - Create branches as `issue-<number>-<short-slug>`.
 - Move the issue to `In progress` before starting work.
 - When a PR is ready, move to `In review`.
-- After merge and verification, set to `Done`.
+- After merge and verification, set to `Done` and close the issue.
 
 ## Definition of Done
 - Acceptance criteria met
