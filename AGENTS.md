@@ -8,6 +8,9 @@ Fantasy Autobattler is a fantasy-themed autobattle project. The goal is a shared
 - `docs/` for architecture, planning, and project conventions.
 - `docs/project_conventions.md` for issue templates, fields, and workflow rules.
 - GitHub Project `Fantasy Autobattler — Battles Only` for milestones, iteration planning, and task status.
+## Issue Templates & Conventions
+- Use the GitHub issue templates (Feature/Task, Bug, Spike) whenever creating new issues.
+- Follow `docs/project_conventions.md` for required fields, status flow, and Definition of Done expectations.
 
 ## Repo Structure
 - `desktop/`, `core/`, `server/` are the primary product components.
