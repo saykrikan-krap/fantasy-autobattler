@@ -5,8 +5,12 @@ Fantasy Autobattler is a fantasy-themed autobattle project. The goal is a shared
 
 ## Docs
 - `README.md` for the current repo overview and structure.
-- `docs/` for design notes and longer-form plans.
+- `docs/` for architecture, planning, and project conventions.
+- `docs/project_conventions.md` for issue templates, fields, and workflow rules.
 - GitHub Project `Fantasy Autobattler — Battles Only` for milestones, iteration planning, and task status.
+## Issue Templates & Conventions
+- Use the GitHub issue templates (Feature/Task, Bug, Spike) whenever creating new issues.
+- Follow `docs/project_conventions.md` for required fields, status flow, and Definition of Done expectations.
 
 ## Repo Structure
 - `desktop/`, `core/`, `server/` are the primary product components.
@@ -25,4 +29,4 @@ Fantasy Autobattler is a fantasy-themed autobattle project. The goal is a shared
 3. Create a branch from `master` in your active worktree (example: `issue-<number>-<short-slug>`).
 4. Implement the work and open a PR.
 5. When the PR is ready for review, set the status to `In review`.
-6. After merge and verification, set the status to `Done`.
+6. After merge and verification, set the status to `Done` and close the issue.

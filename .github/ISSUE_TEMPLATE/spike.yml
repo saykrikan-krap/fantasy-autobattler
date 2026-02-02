@@ -1,0 +1,79 @@
+name: Spike / Investigation
+description: Timeboxed research to reduce uncertainty.
+title: "[Spike] "
+labels: ["spike"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Spikes should be timeboxed and produce a clear artifact or decision.
+        After creating the issue, add it to the project board and set Status/Type/Area/Target/Size.
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Question / Hypothesis
+      description: What are we trying to learn or decide?
+      placeholder: "Example: Can we stream event logs with seek support using length-delimited protobuf + zstd?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Why is this spike needed now?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: timebox
+    attributes:
+      label: Timebox
+      options:
+        - 2 hours
+        - 4 hours
+        - 1 day
+        - 2 days
+        - 1 week
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: What is included in the investigation?
+      placeholder: "Example: prototype log writer/reader, measure file size, evaluate seek index."
+    validations:
+      required: true
+
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: Out of Scope
+      description: Explicitly call out what will not be attempted.
+
+  - type: textarea
+    id: deliverable
+    attributes:
+      label: Expected Deliverable
+      description: What artifact should this spike produce?
+      placeholder: "Example: short doc with recommendation + prototype repo link."
+    validations:
+      required: true
+
+  - type: textarea
+    id: success
+    attributes:
+      label: Success Criteria
+      description: What outcome makes the spike successful?
+      placeholder: "Example: choose a log format and document tradeoffs."
+    validations:
+      required: true
+
+  - type: textarea
+    id: followup
+    attributes:
+      label: Follow-up Work
+      description: Issues to file after this spike finishes.

@@ -1,0 +1,93 @@
+name: Bug Report
+description: Something isn't working as expected.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Provide enough detail to reproduce and verify the fix.
+        After creating the issue, add it to the project board and set Status/Type/Area/Target/Size.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: One or two sentences describing the bug.
+      placeholder: "Example: Replay playback freezes when seeking past 10,000 ticks."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Provide exact steps and inputs.
+      placeholder: "1. Open replay viewer\n2. Load replay_2000_units.log\n3. Drag scrubber to 75%"
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      placeholder: "Example: Playback continues with no freeze."
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      placeholder: "Example: UI hangs and CPU spikes to 100%."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - P0 (blocks work or corrupts data)
+        - P1 (major feature broken)
+        - P2 (degraded but workaround exists)
+        - P3 (minor/edge case)
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, build, commit, and any relevant hardware.
+      placeholder: "Example: Windows 11, commit 1234abcd, RTX 3060"
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Screenshots / Repro Artifacts
+      description: Paste logs or link to files.
+      placeholder: "Attach crash log or replay file."
+
+  - type: textarea
+    id: regression
+    attributes:
+      label: Regression?
+      description: Did this work in a previous build? If yes, name the last known good.
+      placeholder: "Example: Worked in commit 0a1b2c3d"
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Fix Verification / Acceptance Criteria
+      description: How will we know it is fixed?
+      placeholder: "Example: Repro steps no longer freeze and playback continues."
+    validations:
+      required: true
+
+  - type: textarea
+    id: testing
+    attributes:
+      label: Testing Plan
+      description: What tests or validation will be done?
+      placeholder: "Example: Add regression test; manual smoke test."

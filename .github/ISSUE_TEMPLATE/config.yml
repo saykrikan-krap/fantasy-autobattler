@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Project Board
+    url: https://github.com/users/saykrikan-krap/projects/1
+    about: Check current iteration, status, and priorities.
+  - name: Documentation
+    url: https://github.com/saykrikan-krap/fantasy-autobattler/tree/master/docs
+    about: Architecture, roadmap, and requirements docs.
