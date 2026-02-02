@@ -1,0 +1,103 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  rust:
+    if: ${{ hashFiles('**/Cargo.toml') != '' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+
+      - name: Rust format, lint, test
+        run: |
+          set -euo pipefail
+          mapfile -d '' manifests < <(find . -name Cargo.toml -not -path './target/*' -print0)
+          if [ ${#manifests[@]} -eq 0 ]; then
+            echo "No Cargo.toml found. Skipping."
+            exit 0
+          fi
+
+          for manifest in "${manifests[@]}"; do
+            dir=$(dirname "$manifest")
+            echo "::group::rustfmt $dir"
+            (cd "$dir" && cargo fmt --all -- --check)
+            echo "::endgroup::"
+
+            echo "::group::clippy $dir"
+            (cd "$dir" && cargo clippy --all-targets --all-features -- -D warnings)
+            echo "::endgroup::"
+
+            echo "::group::test $dir"
+            (cd "$dir" && cargo test --all)
+            echo "::endgroup::"
+          done
+
+  typescript:
+    if: ${{ hashFiles('**/package.json') != '' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: TypeScript format, lint, typecheck
+        run: |
+          set -euo pipefail
+          mapfile -d '' packages < <(find . -name package.json -not -path './node_modules/*' -print0)
+          if [ ${#packages[@]} -eq 0 ]; then
+            echo "No package.json found. Skipping."
+            exit 0
+          fi
+
+          has_script() {
+            node -e "const s=require('./package.json').scripts||{}; process.exit(s['$1']?0:1)"
+          }
+
+          run_script() {
+            local script="$1"
+            if has_script "$script"; then
+              echo "::group::$script $(pwd)"
+              npm run "$script"
+              echo "::endgroup::"
+            else
+              echo "Skipping $script in $(pwd) (script not defined)"
+            fi
+          }
+
+          for pkg in "${packages[@]}"; do
+            dir=$(dirname "$pkg")
+            echo "::group::install $dir"
+            pushd "$dir" >/dev/null
+            if [ -f package-lock.json ]; then
+              npm ci
+            else
+              npm install
+            fi
+            echo "::endgroup::"
+
+            run_script lint
+            run_script format:check
+            run_script typecheck
+            run_script test
+
+            popd >/dev/null
+          done
