@@ -1,0 +1,4 @@
+Entry point stub for the shared battle core.
+
+Replace this file with the real entry point once the stack is chosen
+(e.g., src/lib.rs or src/main.rs).

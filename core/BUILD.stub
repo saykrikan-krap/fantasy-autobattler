@@ -1,0 +1,4 @@
+Build/config stub for the shared battle core.
+
+Replace this file with the actual build/config files once the core language/runtime is chosen
+(e.g., Cargo.toml for Rust).

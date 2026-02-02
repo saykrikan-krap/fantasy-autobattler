@@ -1,0 +1,4 @@
+Entry point stub for the desktop app.
+
+Replace this file with the real entry point once the stack is chosen
+(e.g., src/main.tsx or src-tauri/src/main.rs).
