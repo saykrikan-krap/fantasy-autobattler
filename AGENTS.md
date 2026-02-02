@@ -32,3 +32,6 @@ Fantasy Autobattler is a fantasy-themed autobattle project. The goal is a shared
 4. Implement the work and open a PR.
 5. When the PR is ready for review, set the status to `In review`.
 6. After merge and verification, set the status to `Done` and close the issue.
+
+## Review Feedback
+- Before resolving a review thread, add a short reply explaining what changed and where.
