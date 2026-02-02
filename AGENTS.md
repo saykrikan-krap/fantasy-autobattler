@@ -28,7 +28,7 @@ Fantasy Autobattler is a fantasy-themed autobattle project. The goal is a shared
 ## Ticket Workflow
 1. List `Ready` items in the current iteration (GitHub UI or `gh project item-list 1 --owner saykrikan-krap`).
 2. Pick a `Ready` item and move it to `In progress` before starting work to prevent duplicate pickup.
-3. Create a branch from `master` in your active worktree (example: `issue-<number>-<short-slug>`).
+3. Create a branch from the latest `master` (fast-forward or rebase to `origin/master` first) in your active worktree (example: `issue-<number>-<short-slug>`).
 4. Implement the work and open a PR.
 5. When the PR is ready for review, set the status to `In review`.
 6. After merge and verification, set the status to `Done` and close the issue.
