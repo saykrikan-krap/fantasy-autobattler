@@ -19,9 +19,10 @@
     ],
     "security": {
       "csp": null
+    },
+    "bundle": {
+      "active": false,
+      "identifier": "com.fantasy.autobattler"
     }
-  },
-  "bundle": {
-    "active": false
   }
 }
