@@ -1,0 +1,94 @@
+name: Feature / Task
+description: New feature or deliverable with clear acceptance criteria.
+title: "[M?] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for product work, tech tasks, and deliverables.
+        Keep the goal concrete and include acceptance criteria that can be verified.
+        After creating the issue, add it to the project board and set Status/Type/Area/Target/Size.
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What outcome are we trying to achieve? State it in measurable terms.
+      placeholder: "Example: The desktop app can load a replay log and scrub through it at 2x speed without stutter."
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context / Problem Statement
+      description: Why now? What problem does this solve?
+      placeholder: "Example: We need a minimal replay viewer to validate the event log format."
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: In Scope
+      description: Bullet the concrete work included in this issue.
+      placeholder: "- Playback controls\n- Log ingestion\n- Basic render loop"
+    validations:
+      required: true
+
+  - type: textarea
+    id: non_goals
+    attributes:
+      label: Out of Scope
+      description: What is explicitly not included to keep this contained?
+      placeholder: "- Sound effects\n- Unit inspection panel"
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: What must be true for this to be done? Keep it testable.
+      placeholder: "- Replay loads a golden log and plays end-to-end\n- Seek works within 250ms\n- Unit count stays stable at 2k"
+    validations:
+      required: true
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks / Open Questions
+      description: Call out unknowns, performance risks, or dependencies.
+      placeholder: "Example: We may need to change the log schema to support seeking."
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: Link to blocking issues or external decisions.
+      placeholder: "- #123 (log schema)\n- Asset pipeline decision"
+
+  - type: textarea
+    id: testing
+    attributes:
+      label: Testing Plan
+      description: What tests or validation will be done?
+      placeholder: "Example: Add unit test for log decoding; manual playback smoke test."
+
+  - type: textarea
+    id: docs
+    attributes:
+      label: Documentation Updates
+      description: What docs need to change or be added?
+      placeholder: "Example: Update docs/architecture/v1_architecture.md section 6."
+
+  - type: checkboxes
+    id: dod
+    attributes:
+      label: Definition of Done
+      description: Confirm the finishing steps that apply.
+      options:
+        - label: Acceptance criteria met
+        - label: Tests updated/added (as applicable)
+        - label: Determinism preserved (if touching sim/log)
+        - label: Docs updated (if behavior or format changes)
+        - label: PR linked and merged

@@ -5,7 +5,8 @@ Fantasy Autobattler is a fantasy-themed autobattle project. The goal is a shared
 
 ## Docs
 - `README.md` for the current repo overview and structure.
-- `docs/` for design notes and longer-form plans.
+- `docs/` for architecture, planning, and project conventions.
+- `docs/project_conventions.md` for issue templates, fields, and workflow rules.
 - GitHub Project `Fantasy Autobattler — Battles Only` for milestones, iteration planning, and task status.
 
 ## Repo Structure
