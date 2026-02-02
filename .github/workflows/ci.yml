@@ -12,7 +12,6 @@ concurrency:
 
 jobs:
   rust:
-    if: ${{ hashFiles('**/Cargo.toml') != '' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -48,7 +47,6 @@ jobs:
           done
 
   typescript:
-    if: ${{ hashFiles('**/package.json') != '' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
