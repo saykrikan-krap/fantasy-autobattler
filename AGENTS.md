@@ -5,12 +5,14 @@ Fantasy Autobattler is a fantasy-themed autobattle project. The goal is a shared
 
 ## Docs
 - `README.md` for the current repo overview and structure.
-- `docs/` for architecture, planning, and project conventions.
+- `docs/` for architecture, planning, and conventions.
 - `docs/project_conventions.md` for issue templates, fields, and workflow rules.
+- `docs/coding_conventions.md` for coding conventions, PR rules, and Definition of Done.
 - GitHub Project `Fantasy Autobattler — Battles Only` for milestones, iteration planning, and task status.
+
 ## Issue Templates & Conventions
 - Use the GitHub issue templates (Feature/Task, Bug, Spike) whenever creating new issues.
-- Follow `docs/project_conventions.md` for required fields, status flow, and Definition of Done expectations.
+- Follow `docs/project_conventions.md` and `docs/coding_conventions.md` for required fields, status flow, and Definition of Done expectations.
 
 ## Repo Structure
 - `desktop/`, `core/`, `server/` are the primary product components.
@@ -26,7 +28,7 @@ Fantasy Autobattler is a fantasy-themed autobattle project. The goal is a shared
 ## Ticket Workflow
 1. List `Ready` items in the current iteration (GitHub UI or `gh project item-list 1 --owner saykrikan-krap`).
 2. Pick a `Ready` item and move it to `In progress` before starting work to prevent duplicate pickup.
-3. Create a branch from `master` in your active worktree (example: `issue-<number>-<short-slug>`).
+3. Create a branch from the latest `master` (fast-forward or rebase to `origin/master` first) in your active worktree (example: `issue-<number>-<short-slug>`).
 4. Implement the work and open a PR.
 5. When the PR is ready for review, set the status to `In review`.
 6. After merge and verification, set the status to `Done` and close the issue.
