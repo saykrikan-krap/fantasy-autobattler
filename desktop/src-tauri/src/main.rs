@@ -1,3 +1,3 @@
 fn main() {
-  fantasy_autobattler_desktop::run();
+    fantasy_autobattler_desktop::run();
 }
