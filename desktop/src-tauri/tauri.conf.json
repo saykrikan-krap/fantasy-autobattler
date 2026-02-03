@@ -1,0 +1,29 @@
+{
+  "productName": "Fantasy Autobattler",
+  "version": "0.1.0",
+  "identifier": "com.fantasyautobattler.desktop",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:5173",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Fantasy Autobattler",
+        "width": 1024,
+        "height": 720
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": false,
+    "icon": [
+      "icons/icon.png"
+    ]
+  }
+}
